@@ -1,5 +1,5 @@
 /* ============================================================
-   SunStride Solar — landing page styles
+   Shree Samarth Energy Solution — landing page styles
    Organised top-to-bottom: utilities → nav → sections → footer
    ============================================================ */
 
@@ -159,13 +159,19 @@
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  line-height: 1.15;
   color: #fff;
   letter-spacing: -0.02em;
+}
+/* keep the name on one line on desktop, where it sits beside the links */
+@media (min-width: 993px) {
+  .nav__brand { white-space: nowrap; }
 }
 .nav__logo {
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   width: 38px; height: 38px;
   border-radius: 11px;
   background: linear-gradient(135deg, var(--sun-400), var(--sun-600));
@@ -202,7 +208,7 @@
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .nav__burger { display: flex; }
   .nav__links {
     position: absolute;

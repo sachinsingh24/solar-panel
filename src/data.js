@@ -11,7 +11,7 @@ export const img = (name) => `${process.env.PUBLIC_URL}/images/${name}`;
 
 /* ---- 1. YOUR BUSINESS — edit these ------------------------ */
 export const BRAND = {
-  name: 'SunStride Solar',
+  name: 'Shree Samarth Energy Solution',
   tagline: 'Rooftop solar, done right.',
   phone: '+91 98765 43210',
   phoneHref: 'tel:+919876543210',

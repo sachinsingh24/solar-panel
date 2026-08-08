@@ -9,7 +9,7 @@ export default function Components() {
         <SectionHead
           eyebrow="The catalogue"
           title="What’s actually inside your solar system"
-          sub="A rooftop system is just four honest parts working together. Here’s each one — photographed on a real SunStride install."
+          sub="A rooftop system is just four honest parts working together. Here’s each one — photographed on one of our own installs."
         />
 
         <div className="components__grid">
