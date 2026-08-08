@@ -8,6 +8,7 @@ import Benefits from './sections/Benefits';
 import SavingsCalculator from './sections/SavingsCalculator';
 import Components from './sections/Components';
 import Packages from './sections/Packages';
+import Business from './sections/Business';
 import Gallery from './sections/Gallery';
 import FAQ from './sections/FAQ';
 import Contact from './sections/Contact';
@@ -25,6 +26,7 @@ export default function App() {
         <SavingsCalculator />
         <Components />
         <Packages />
+        <Business />
         <Gallery />
         <FAQ />
         <Contact />

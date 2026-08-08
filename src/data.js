@@ -128,6 +128,37 @@ export const PACKAGES = [
   { size: '10 kW', forWhom: 'Shop / small business', units: '~40 units/day', offsets: 'a ~₹10,000/mo bill', price: '₹5.9 L', popular: false },
 ];
 
+/* ---- 7b. CORPORATE / commercial & industrial -------------- */
+export const CORP_BENEFITS = [
+  { icon: 'rupee', title: 'Slash operating costs', text: 'Commercial and industrial tariffs are the steepest of all — so every solar unit saves you more, and well-sized systems often pay back in just 3–4 years.' },
+  { icon: 'shield', title: 'Big tax write-offs', text: 'Claim up to 40% accelerated depreciation in the first year, plus GST input credit — a large slice of the cost comes straight back as tax savings.' },
+  { icon: 'spark', title: 'Zero-investment option', text: 'Don’t want the capital cost? Go solar on an OPEX / PPA basis and simply buy your own rooftop power at a lower, fixed rate from day one.' },
+  { icon: 'panel', title: 'Scales to megawatts', text: 'Rooftop, ground-mount or solar-carport arrays engineered from tens of kW to MW-scale, matched precisely to your load profile.' },
+  { icon: 'leaf', title: 'Meets your ESG goals', text: 'Cut Scope-2 emissions, earn IGBC / LEED green-building points and back your sustainability reporting with real generation data.' },
+  { icon: 'lock', title: 'Beat tariff & demand hikes', text: 'Lock a big share of your energy cost for 25 years and take the sting out of rising commercial rates and demand charges.' },
+];
+
+export const CORP_MODELS = [
+  {
+    tag: 'CapEx',
+    title: 'Own your system',
+    text: 'You invest upfront and keep 100% of the savings — plus depreciation and the highest long-term returns. Best when you have the capital and want maximum ROI.',
+    points: ['Maximum lifetime savings', 'Accelerated depreciation', 'Asset on your books'],
+  },
+  {
+    tag: 'OPEX / PPA',
+    title: 'Zero upfront',
+    text: 'We fund, install and maintain the system; you simply pay for the solar power you use at a rate below the grid. Start saving from month one with no capital outlay.',
+    points: ['No capital investment', 'Pay only for what you use', 'We handle all O&M'],
+  },
+];
+
+export const CORP_INDUSTRIES = [
+  'Factories & MIDC units', 'Warehouses & logistics', 'Offices & IT parks',
+  'Hotels & resorts', 'Hospitals & labs', 'Schools & colleges',
+  'Malls & retail', 'Cold storage', 'Petrol pumps', 'Housing societies',
+];
+
 /* ---- 8. GALLERY — real installations ---------------------- */
 export const GALLERY = [
   { image: 'install-highrise.jpg', caption: 'Rooftop array on a high-rise residence' },
@@ -149,6 +180,10 @@ export const FAQS = [
   {
     q: 'What is the PM Surya Ghar subsidy?',
     a: 'It’s a central-government scheme for residential rooftops: ₹30,000 per kW for the first 2 kW and ₹18,000 for the 3rd kW, capped at ₹78,000. Many states also offer up to 300 free units a month on top of that.',
+  },
+  {
+    q: 'Do you handle commercial and industrial projects?',
+    a: 'Absolutely — a large part of our work is C&I: factories, warehouses, offices, hotels, hospitals and housing societies, from tens of kW up to MW-scale. We offer both CapEx (you own it) and OPEX/PPA (zero-upfront) models, and help you claim accelerated depreciation and GST benefits.',
   },
   {
     q: 'How long will it last, and what’s the warranty?',

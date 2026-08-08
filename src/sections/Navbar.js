@@ -8,6 +8,7 @@ const LINKS = [
   ['Benefits', '#benefits'],
   ['Savings', '#savings'],
   ['Systems', '#packages'],
+  ['Business', '#business'],
   ['Our work', '#work'],
 ];
 

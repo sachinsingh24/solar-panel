@@ -23,6 +23,7 @@ export default function Footer() {
             <a href="#how">How it works</a>
             <a href="#savings">Savings calculator</a>
             <a href="#packages">System sizes</a>
+            <a href="#business">For business</a>
             <a href="#work">Our work</a>
           </div>
           <div className="footer__col">
