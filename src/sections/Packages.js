@@ -28,7 +28,7 @@ export default function Packages() {
               <div className="pkg__price">
                 <span className="pkg__from">from</span>
                 <span className="pkg__amt">{p.price}</span>
-                <span className="pkg__after">after subsidy*</span>
+                <span className="pkg__after">{p.subsidyEligible ? 'after subsidy*' : 'indicative gross price'}</span>
               </div>
 
               <a className={`btn ${p.popular ? 'btn--gold' : 'btn--outline'} pkg__btn`} href="#contact">
@@ -39,8 +39,8 @@ export default function Packages() {
         </div>
 
         <p className="packages__note">
-          *Indicative turnkey prices after applicable subsidy, for typical residential
-          rooftops. Final pricing is confirmed after a free site survey.
+          *Residential package prices marked “after subsidy” are indicative after PM Surya Ghar support.
+          The 10 kW commercial package is shown at a gross indicative price. Final eligibility and pricing are confirmed after a free site survey.
         </p>
       </div>
     </section>

@@ -13,17 +13,17 @@ export const img = (name) => `${process.env.PUBLIC_URL}/images/${name}`;
 export const BRAND = {
   name: 'Shree Samarth Energy Solution',
   tagline: 'Rooftop solar, done right.',
-  phone: '+91 98765 43210',
-  phoneHref: 'tel:+919876543210',
-  whatsapp: '919876543210', // country code + number, no “+”
-  email: 'hello@sunstridesolar.in',
+  phone: '+91 98344 56918',
+  phoneHref: 'tel:+919834456918',
+  whatsapp: '919834456918', // country code + number, no “+”
+  email: 'erparul9@gmail.com',
   serviceArea: 'Maharashtra & across India',
 };
 
 /* ---- 2. HERO trust strip ---------------------------------- */
 export const IMPACT = [
   { target: 90, suffix: '%', prefix: '', label: 'Cut in your electricity bill' },
-  { target: 78000, suffix: '', prefix: '₹', label: 'Govt. subsidy you can claim' },
+  { target: 78000, suffix: '', prefix: '₹', label: 'Central subsidy for eligible homes' },
   { target: 25, suffix: '+ yrs', prefix: '', label: 'System lifespan' },
   { target: null, display: '3–5 yrs', label: 'Typical payback period' },
 ];
@@ -46,7 +46,7 @@ export const WHY = [
     icon: 'gift',
     title: 'The government is paying you to switch',
     text:
-      'Under the PM Surya Ghar scheme, residential rooftop systems get a direct subsidy of up to ₹78,000 — plus free units every month in many states.',
+      'Under the PM Surya Ghar scheme, eligible residential rooftop systems receive central subsidy support of up to ₹78,000.',
   },
   {
     icon: 'leaf',
@@ -83,7 +83,7 @@ export const STEPS = [
 /* ---- 5. BENEFITS ------------------------------------------ */
 export const BENEFITS = [
   { icon: 'rupee', title: 'Slash your bills', text: 'Cut your electricity bill by 70–90%. A well-sized system can wipe out the energy charge almost entirely.' },
-  { icon: 'gift', title: 'Government subsidy', text: 'Claim up to ₹78,000 on residential rooftops under the PM Surya Ghar Muft Bijli Yojana.' },
+  { icon: 'gift', title: 'Government subsidy', text: 'Eligible residential rooftops under PM Surya Ghar Muft Bijli Yojana can receive central subsidy support of up to ₹78,000.' },
   { icon: 'clock', title: 'Fast payback', text: 'Most homes recover the full cost in 3–5 years — then enjoy two decades of near-free power.' },
   { icon: 'shield', title: 'Built to last', text: 'Tier-1 panels carry a 25-year performance warranty and keep generating long after they’ve paid for themselves.' },
   { icon: 'meter', title: 'Net metering', text: 'Export your daytime surplus to the grid and draw it back when the sun isn’t shining.' },
@@ -122,10 +122,10 @@ export const COMPONENTS = [
 
 /* ---- 7. CATALOGUE — system sizes -------------------------- */
 export const PACKAGES = [
-  { size: '1 kW', forWhom: 'Small home', units: '~4 units/day', offsets: 'a ~₹1,000/mo bill', price: '₹35,000', popular: false },
-  { size: '3 kW', forWhom: 'Most homes', units: '~12 units/day', offsets: 'a ~₹3,000/mo bill', price: '₹1.17 L', popular: true },
-  { size: '5 kW', forWhom: 'Large home / villa', units: '~20 units/day', offsets: 'a ~₹5,000/mo bill', price: '₹2.47 L', popular: false },
-  { size: '10 kW', forWhom: 'Shop / small business', units: '~40 units/day', offsets: 'a ~₹10,000/mo bill', price: '₹5.9 L', popular: false },
+  { size: '1 kW', forWhom: 'Small home', units: '~4 units/day', offsets: 'a ~₹1,000/mo bill', price: '₹35,000', subsidyEligible: true, popular: false },
+  { size: '3 kW', forWhom: 'Most homes', units: '~12 units/day', offsets: 'a ~₹3,000/mo bill', price: '₹1.17 L', subsidyEligible: true, popular: true },
+  { size: '5 kW', forWhom: 'Large home / villa', units: '~20 units/day', offsets: 'a ~₹5,000/mo bill', price: '₹2.47 L', subsidyEligible: true, popular: false },
+  { size: '10 kW', forWhom: 'Shop / small business', units: '~40 units/day', offsets: 'a ~₹10,000/mo bill', price: '₹5.9 L', subsidyEligible: false, popular: false },
 ];
 
 /* ---- 7b. CORPORATE / commercial & industrial -------------- */
@@ -179,7 +179,7 @@ export const FAQS = [
   },
   {
     q: 'What is the PM Surya Ghar subsidy?',
-    a: 'It’s a central-government scheme for residential rooftops: ₹30,000 per kW for the first 2 kW and ₹18,000 for the 3rd kW, capped at ₹78,000. Many states also offer up to 300 free units a month on top of that.',
+    a: 'PM Surya Ghar provides central subsidy for eligible residential rooftops: ₹30,000 per kW for the first 2 kW, ₹18,000 for the 3rd kW, capped at ₹78,000. Final eligibility and disbursement are confirmed through the MNRE application process and the relevant DISCOM.',
   },
   {
     q: 'Do you handle commercial and industrial projects?',
@@ -220,9 +220,11 @@ export const CALC = {
 
 /* Residential PM Surya Ghar subsidy, in ₹, by system size (kW). */
 export function subsidyFor(kw) {
-  if (kw <= 0) return 0;
-  if (kw <= 1) return 30000 * kw;
-  if (kw <= 2) return 30000 * kw; // ₹30k/kW up to 2 kW
-  if (kw < 3) return 60000 + 18000 * (kw - 2); // ₹18k for the 3rd kW
-  return 78000; // capped at ₹78,000 for 3 kW and above
+  if (!Number.isFinite(kw) || kw <= 0) return 0;
+
+  // PM Surya Ghar: ₹30,000/kW for each of the first 2 kW,
+  // ₹18,000 for the third kW, and ₹78,000 maximum.
+  const firstTwoKw = Math.min(Math.max(kw, 0), 2);
+  const thirdKw = Math.max(0, Math.min(kw - 2, 1));
+  return Math.min(78000, firstTwoKw * 30000 + thirdKw * 18000);
 }
