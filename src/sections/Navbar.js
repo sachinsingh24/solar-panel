@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BRAND } from '../data';
-import { Icon } from '../ui';
 
 const LINKS = [
   ['Why solar', '#why'],
@@ -27,8 +26,12 @@ export default function Navbar() {
     <nav className={`nav ${scrolled ? 'nav--solid' : ''} ${menuOpen ? 'nav--open' : ''}`}>
       <div className="nav__inner">
         <a className="nav__brand" href="#top" onClick={() => setMenuOpen(false)}>
-          <span className="nav__logo"><Icon name="sun" size={22} /></span>
-          {BRAND.name}
+          <img
+            className="nav__logo"
+            src={`${process.env.PUBLIC_URL}/Shree Samarth Energy Solution.png`}
+            alt="Shree Samarth Energy Solution logo"
+          />
+          <span>{BRAND.name}</span>
         </a>
 
         <div className="nav__links">

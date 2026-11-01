@@ -1,6 +1,5 @@
 import React from 'react';
 import { BRAND } from '../data';
-import { Icon } from '../ui';
 
 const YEAR = new Date().getFullYear();
 
@@ -10,8 +9,12 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <a className="nav__brand" href="#top">
-            <span className="nav__logo"><Icon name="sun" size={22} /></span>
-            {BRAND.name}
+            <img
+              className="nav__logo"
+              src={`${process.env.PUBLIC_URL}/Shree Samarth Energy Solution.png`}
+              alt="Shree Samarth Energy Solution logo"
+            />
+            <span>{BRAND.name}</span>
           </a>
           <p className="footer__tag">{BRAND.tagline} Serving {BRAND.serviceArea}.</p>
         </div>

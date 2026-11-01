@@ -169,13 +169,12 @@
   .nav__brand { white-space: nowrap; }
 }
 .nav__logo {
-  display: grid;
-  place-items: center;
+  display: block;
   flex-shrink: 0;
-  width: 38px; height: 38px;
-  border-radius: 11px;
-  background: linear-gradient(135deg, var(--sun-400), var(--sun-600));
-  color: var(--navy-900);
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 8px;
   box-shadow: 0 6px 16px rgba(245, 158, 11, 0.45);
 }
 .nav__links { display: flex; align-items: center; gap: 22px; }
