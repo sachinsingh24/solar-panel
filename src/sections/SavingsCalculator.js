@@ -38,7 +38,7 @@ function estimate(monthlyBill) {
   const lifetimeSavings = gridOnly25 - solarPath25;
 
   return {
-    kw, gross, subsidy, netCost, monthlySavings, annualSavings,
+    kw, monthlyUnits, gross, subsidy, netCost, monthlySavings, annualSavings,
     payback, gridOnly25, solarPath25, lifetimeSavings,
   };
 }
@@ -65,6 +65,7 @@ export default function SavingsCalculator() {
             <div className="calc__billhead">
               <span className="calc__billlabel">Your monthly electricity bill</span>
               <span className="calc__billvalue">{fmtINR(bill)}</span>
+              <p className="calc__help">Use your average bill from the last 3–6 months for the best estimate.</p>
             </div>
 
             <input
@@ -83,6 +84,7 @@ export default function SavingsCalculator() {
               <span>{fmtINR(CALC.BILL_MAX)}+</span>
             </div>
 
+            <div className="calc__presethead">Quick choices</div>
             <div className="calc__presets">
               {PRESETS.map((p) => (
                 <button
@@ -101,6 +103,11 @@ export default function SavingsCalculator() {
                 Recommended system{' '}
                 <strong>≈ {r.kw} kW</strong>
               </span>
+            </div>
+            <div className="calc__usage">
+              <span>Estimated electricity use</span>
+              <strong>{Math.round(r.monthlyUnits)} units/month</strong>
+              <small>Your final system size also depends on roof space and sunlight.</small>
             </div>
           </div>
 
