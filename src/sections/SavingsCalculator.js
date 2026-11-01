@@ -108,7 +108,7 @@ export default function SavingsCalculator() {
           <div className="calc__results">
             <div className="calc__tiles">
               <div className="tile">
-                <span className="tile__label">You save / month</span>
+                <span className="tile__label">Estimated savings per month</span>
                 <span className="tile__value tile__value--leaf">{fmtINR(r.monthlySavings)}</span>
               </div>
               <div className="tile">
@@ -117,22 +117,22 @@ export default function SavingsCalculator() {
                 <span className="tile__sub">{fmtINRShort(r.gross)} − {fmtINRShort(r.subsidy)} subsidy</span>
               </div>
               <div className="tile">
-                <span className="tile__label">Pays for itself in</span>
+                <span className="tile__label">Estimated time to recover cost</span>
                 <span className="tile__value">{r.payback.toFixed(1)} yrs</span>
               </div>
               <div className="tile">
-                <span className="tile__label">You save / year</span>
+                <span className="tile__label">Estimated savings per year</span>
                 <span className="tile__value tile__value--leaf">{fmtINRShort(r.annualSavings)}</span>
               </div>
             </div>
 
             {/* ---- 25-year comparison ---- */}
             <div className="compare">
-              <div className="compare__head">Over the next 25 years</div>
+              <div className="compare__head">Estimated comparison over 25 years</div>
 
               <div className="compare__row">
                 <span className="compare__name">
-                  <Icon name="bolt" size={16} /> Keep paying the grid
+                  <Icon name="bolt" size={16} /> Total electricity bill without solar
                 </span>
                 <div className="compare__track">
                   <div
@@ -145,7 +145,7 @@ export default function SavingsCalculator() {
 
               <div className="compare__row">
                 <span className="compare__name">
-                  <Icon name="sun" size={16} /> Go solar (total outlay)
+                  <Icon name="sun" size={16} /> Total cost with solar
                 </span>
                 <div className="compare__track">
                   <div
@@ -157,7 +157,7 @@ export default function SavingsCalculator() {
               </div>
 
               <div className="compare__net">
-                <span>Net money back in your pocket</span>
+                <span>Estimated money saved over 25 years</span>
                 <strong>{fmtINRShort(r.lifetimeSavings)}</strong>
               </div>
             </div>
@@ -169,10 +169,10 @@ export default function SavingsCalculator() {
         </Reveal>
 
         <p className="calc__note">
-          Illustrative estimate assuming ≈ ₹{CALC.TARIFF}/unit, {CALC.GEN_PER_KW_DAY} units per kW
-          per day, ~₹{(CALC.COST_PER_KW / 1000).toFixed(0)}k/kW turnkey cost and {Math.round(CALC.TARIFF_INFLATION * 100)}%
-          yearly tariff rise. Your real numbers depend on your roof, location, consumption
-          pattern and DISCOM policy — we confirm everything with a free site survey.
+          This is an estimate using ₹{CALC.TARIFF} per electricity unit, about {CALC.GEN_PER_KW_DAY} units generated
+          per kW each day, and an installation cost of about ₹{(CALC.COST_PER_KW / 1000).toFixed(0)} thousand per kW.
+          It assumes electricity prices rise by {Math.round(CALC.TARIFF_INFLATION * 100)}% each year. Your final savings depend on your roof,
+          sunlight, electricity use and subsidy approval. We confirm everything during a free site survey.
         </p>
       </div>
     </section>

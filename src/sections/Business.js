@@ -9,7 +9,7 @@ export default function Business() {
         <SectionHead
           eyebrow="For businesses"
           title="Solar that works as hard as your business"
-          sub="Factories, warehouses, offices, hotels, hospitals and housing societies — commercial rooftops see the fastest payback of all, thanks to higher tariffs and generous tax benefits."
+          sub="For factories, warehouses, offices, hotels, hospitals and housing societies. Businesses can save because solar power reduces expensive monthly electricity purchases."
         />
 
         <div className="biz__grid">

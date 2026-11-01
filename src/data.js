@@ -25,7 +25,7 @@ export const IMPACT = [
   { target: 90, suffix: '%', prefix: '', label: 'Cut in your electricity bill' },
   { target: 78000, suffix: '', prefix: '₹', label: 'Central subsidy for eligible homes' },
   { target: 25, suffix: '+ yrs', prefix: '', label: 'System lifespan' },
-  { target: null, display: '3–5 yrs', label: 'Typical payback period' },
+  { target: null, display: '3–5 yrs', label: 'Typical time to recover the cost' },
 ];
 
 /* ---- 3. WHY solar, why now -------------------------------- */
@@ -34,7 +34,7 @@ export const WHY = [
     icon: 'trend',
     title: 'Power only gets costlier',
     text:
-      'Grid tariffs in India climb almost every year. Every unit you generate on your own roof is a unit you never have to buy again — for the next 25 years.',
+      'Electricity prices in India rise often. Every unit produced on your roof is one less unit you need to buy from your electricity company — for many years.',
   },
   {
     icon: 'roof',
@@ -71,24 +71,24 @@ export const STEPS = [
   {
     num: '03',
     title: 'Your home runs on solar first',
-    text: 'Your fans, lights, AC and pump draw from the sun before they ever touch a paid grid unit.',
+    text: 'Solar power runs your fans, lights, air conditioner and pump first. You buy electricity from the grid only when your solar system does not produce enough.',
   },
   {
     num: '04',
     title: 'Extra units earn you credit',
-    text: 'Surplus power flows back through a net meter and is banked as credit for nights and cloudy monsoon days.',
+    text: 'Extra daytime power is sent to the electricity grid. Your electricity company records it as credit, which you can use during the night or cloudy days according to its rules.',
   },
 ];
 
 /* ---- 5. BENEFITS ------------------------------------------ */
 export const BENEFITS = [
-  { icon: 'rupee', title: 'Slash your bills', text: 'Cut your electricity bill by 70–90%. A well-sized system can wipe out the energy charge almost entirely.' },
+  { icon: 'rupee', title: 'Lower your electricity bill', text: 'A properly sized system can reduce your monthly bill by up to 70–90%, depending on your use and sunlight.' },
   { icon: 'gift', title: 'Government subsidy', text: 'Eligible residential rooftops under PM Surya Ghar Muft Bijli Yojana can receive central subsidy support of up to ₹78,000.' },
-  { icon: 'clock', title: 'Fast payback', text: 'Most homes recover the full cost in 3–5 years — then enjoy two decades of near-free power.' },
-  { icon: 'shield', title: 'Built to last', text: 'Tier-1 panels carry a 25-year performance warranty and keep generating long after they’ve paid for themselves.' },
+  { icon: 'clock', title: 'Recover your cost sooner', text: 'Many homes recover the installation cost in about 3–5 years. The system can then continue producing power for many more years.' },
+  { icon: 'shield', title: 'Built to last', text: 'Quality solar panels have a 25-year performance warranty and can keep producing electricity for decades.' },
   { icon: 'meter', title: 'Net metering', text: 'Export your daytime surplus to the grid and draw it back when the sun isn’t shining.' },
   { icon: 'spark', title: 'Almost no upkeep', text: 'No moving parts. An occasional rinse and a yearly check-up is all your system asks for.' },
-  { icon: 'lock', title: 'Beat every tariff hike', text: 'Lock the price of your own power at ₹0. Future rate increases stop hurting your wallet.' },
+  { icon: 'lock', title: 'Reduce the effect of price increases', text: 'Once installed, sunlight used by your system does not increase in price, helping protect you from future electricity rate increases.' },
   { icon: 'home', title: 'Adds property value', text: 'A solar-ready home with tiny running costs commands a stronger price at resale.' },
 ];
 
@@ -98,7 +98,7 @@ export const COMPONENTS = [
     image: 'comp-panels.jpg',
     tag: 'The generator',
     title: 'Solar panels',
-    text: 'High-efficiency Mono-PERC / N-type Tier-1 modules, sized to your roof and load. This is the workhorse that quietly makes your power every day.',
+    text: 'High-quality solar panels are selected for your available roof space and electricity use. These panels generate power whenever sunlight reaches them.',
   },
   {
     image: 'comp-inverter.jpg',
@@ -110,46 +110,46 @@ export const COMPONENTS = [
     image: 'work-structure.jpg',
     tag: 'The backbone',
     title: 'Mounting structure',
-    text: 'Hot-dip galvanised / aluminium framing, custom-fabricated on site to hold your panels at the right tilt and stand up to monsoon winds for decades.',
+    text: 'Strong galvanised steel or aluminium frames are made and fitted on site. They hold the panels at the right angle and are designed to withstand local monsoon winds.',
   },
   {
     image: 'comp-netmeter.jpg',
     tag: 'Metering & safety',
     title: 'Net meter & protection',
-    text: 'Bi-directional net meter, AC/DC distribution boxes, surge protection and proper earthing — the safety backbone that makes the whole system reliable and grid-legal.',
+    text: 'A bidirectional meter, electrical distribution boxes, surge protection and proper earthing help measure solar generation safely and meet electricity-grid requirements.',
   },
 ];
 
 /* ---- 7. CATALOGUE — system sizes -------------------------- */
 export const PACKAGES = [
-  { size: '1 kW', forWhom: 'Small home', units: '~4 units/day', offsets: 'a ~₹1,000/mo bill', price: '₹35,000', subsidyEligible: true, popular: false },
-  { size: '3 kW', forWhom: 'Most homes', units: '~12 units/day', offsets: 'a ~₹3,000/mo bill', price: '₹1.17 L', subsidyEligible: true, popular: true },
-  { size: '5 kW', forWhom: 'Large home / villa', units: '~20 units/day', offsets: 'a ~₹5,000/mo bill', price: '₹2.47 L', subsidyEligible: true, popular: false },
-  { size: '10 kW', forWhom: 'Shop / small business', units: '~40 units/day', offsets: 'a ~₹10,000/mo bill', price: '₹5.9 L', subsidyEligible: false, popular: false },
+  { size: '1 kW', forWhom: 'Small home', units: 'about 4 units/day', offsets: 'a bill of about ₹1,000/month', price: '₹35,000', subsidyEligible: true, popular: false },
+  { size: '3 kW', forWhom: 'Most homes', units: 'about 12 units/day', offsets: 'a bill of about ₹3,000/month', price: '₹1.17 lakh', subsidyEligible: true, popular: true },
+  { size: '5 kW', forWhom: 'Large home / villa', units: 'about 20 units/day', offsets: 'a bill of about ₹5,000/month', price: '₹2.47 lakh', subsidyEligible: true, popular: false },
+  { size: '10 kW', forWhom: 'Shop / small business', units: 'about 40 units/day', offsets: 'a bill of about ₹10,000/month', price: '₹5.9 lakh', subsidyEligible: false, popular: false },
 ];
 
 /* ---- 7b. CORPORATE / commercial & industrial -------------- */
 export const CORP_BENEFITS = [
-  { icon: 'rupee', title: 'Slash operating costs', text: 'Commercial and industrial tariffs are the steepest of all — so every solar unit saves you more, and well-sized systems often pay back in just 3–4 years.' },
-  { icon: 'shield', title: 'Big tax write-offs', text: 'Claim up to 40% accelerated depreciation in the first year, plus GST input credit — a large slice of the cost comes straight back as tax savings.' },
-  { icon: 'spark', title: 'Zero-investment option', text: 'Don’t want the capital cost? Go solar on an OPEX / PPA basis and simply buy your own rooftop power at a lower, fixed rate from day one.' },
-  { icon: 'panel', title: 'Scales to megawatts', text: 'Rooftop, ground-mount or solar-carport arrays engineered from tens of kW to MW-scale, matched precisely to your load profile.' },
-  { icon: 'leaf', title: 'Meets your ESG goals', text: 'Cut Scope-2 emissions, earn IGBC / LEED green-building points and back your sustainability reporting with real generation data.' },
-  { icon: 'lock', title: 'Beat tariff & demand hikes', text: 'Lock a big share of your energy cost for 25 years and take the sting out of rising commercial rates and demand charges.' },
+  { icon: 'rupee', title: 'Reduce operating costs', text: 'Businesses usually pay higher electricity rates, so each unit produced by solar can create meaningful savings. A correctly sized system may recover its cost in about 3–4 years.' },
+  { icon: 'shield', title: 'Possible tax benefits', text: 'Eligible businesses may claim accelerated depreciation and GST credit. Your accountant can confirm the benefits for your business.' },
+  { icon: 'spark', title: 'No upfront payment option', text: 'With a solar power agreement, a provider can fund and maintain the system. Your business pays for the electricity it uses, usually at an agreed rate.' },
+  { icon: 'panel', title: 'Systems for every business size', text: 'We design rooftop, ground-mounted and solar-carport systems based on your electricity use, available space and budget.' },
+  { icon: 'leaf', title: 'Support sustainability goals', text: 'Solar power reduces electricity taken from fossil-fuel sources and can support green-building and environmental reporting.' },
+  { icon: 'lock', title: 'Reduce future electricity increases', text: 'A solar system produces its own power for decades, helping protect your business from part of future electricity price increases.' },
 ];
 
 export const CORP_MODELS = [
   {
-    tag: 'CapEx',
+    tag: 'Buy the system',
     title: 'Own your system',
-    text: 'You invest upfront and keep 100% of the savings — plus depreciation and the highest long-term returns. Best when you have the capital and want maximum ROI.',
-    points: ['Maximum lifetime savings', 'Accelerated depreciation', 'Asset on your books'],
+    text: 'You pay for the system upfront. You receive the electricity savings and any tax benefits, and the system belongs to your business.',
+    points: ['Greater long-term savings', 'Available tax benefits', 'System belongs to you']
   },
   {
-    tag: 'OPEX / PPA',
-    title: 'Zero upfront',
-    text: 'We fund, install and maintain the system; you simply pay for the solar power you use at a rate below the grid. Start saving from month one with no capital outlay.',
-    points: ['No capital investment', 'Pay only for what you use', 'We handle all O&M'],
+    tag: 'Power agreement',
+    title: 'Pay no money upfront',
+    text: 'We or a funding partner install and maintain the system. Your business pays for the solar electricity used at an agreed rate.',
+    points: ['No upfront installation cost', 'Pay only for solar power used', 'Provider handles maintenance']
   },
 ];
 
@@ -175,15 +175,15 @@ export const GALLERY = [
 export const FAQS = [
   {
     q: 'How much can I actually save?',
-    a: 'A right-sized system offsets roughly 70–90% of your bill. Many homeowners take a ₹3,000 monthly bill down to just a few hundred rupees in fixed charges — which adds up to several lakhs kept in your pocket over 25 years.',
+    a: 'The right system size can reduce your monthly bill by about 70–90%. For example, a ₹3,000 bill may fall to fixed charges of only a few hundred rupees. Actual savings depend on your roof, sunlight and electricity use.',
   },
   {
     q: 'What is the PM Surya Ghar subsidy?',
-    a: 'PM Surya Ghar provides central subsidy for eligible residential rooftops: ₹30,000 per kW for the first 2 kW, ₹18,000 for the 3rd kW, capped at ₹78,000. Final eligibility and disbursement are confirmed through the MNRE application process and the relevant DISCOM.',
+    a: 'PM Surya Ghar provides central subsidy support to eligible home rooftops: ₹30,000 per kW for the first 2 kW, and ₹18,000 for a third kW. The maximum subsidy is ₹78,000. Eligibility and final payment depend on approval by the MNRE process and your electricity distribution company.'
   },
   {
     q: 'Do you handle commercial and industrial projects?',
-    a: 'Absolutely — a large part of our work is C&I: factories, warehouses, offices, hotels, hospitals and housing societies, from tens of kW up to MW-scale. We offer both CapEx (you own it) and OPEX/PPA (zero-upfront) models, and help you claim accelerated depreciation and GST benefits.',
+    a: 'Yes. We work with factories, warehouses, offices, hotels, hospitals and housing societies. Systems can range from small commercial installations to large projects. You can either buy and own the system, or use a power agreement that requires no upfront payment.',
   },
   {
     q: 'How long will it last, and what’s the warranty?',
@@ -191,7 +191,7 @@ export const FAQS = [
   },
   {
     q: 'What about cloudy days and the monsoon?',
-    a: 'Panels still generate in diffused daylight — just less. Net metering banks your surplus sunny-day units as credit, so those balance out the cloudy days and nights automatically.',
+    a: 'Panels still produce some power from the daylight on cloudy days, but less than on a clear sunny day. Extra units produced on sunny days may receive credit through net metering according to your electricity company’s rules.'
   },
   {
     q: 'How much maintenance does it need?',

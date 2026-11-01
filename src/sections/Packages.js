@@ -39,8 +39,8 @@ export default function Packages() {
         </div>
 
         <p className="packages__note">
-          *Residential package prices marked “after subsidy” are indicative after PM Surya Ghar support.
-          The 10 kW commercial package is shown at a gross indicative price. Final eligibility and pricing are confirmed after a free site survey.
+          *The package prices marked “after subsidy” include an estimate of the PM Surya Ghar central subsidy for eligible homes.
+          The 10 kW package is the estimated price before subsidy because it is for a shop or business. The final amount depends on the site survey and subsidy approval.
         </p>
       </div>
     </section>
